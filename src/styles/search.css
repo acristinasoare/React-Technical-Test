@@ -1,0 +1,18 @@
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-input {
+  border: 3px solid red;
+  height: 20px;
+  padding: 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-button {
+  border: 3px solid red;
+  background-color: #ffe6e6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
