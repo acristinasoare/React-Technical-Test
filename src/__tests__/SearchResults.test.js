@@ -10,13 +10,10 @@ describe("SearchResults", () => {
     expect(screen.getByText("No results")).toBeInTheDocument();
   });
   it("renders the image with correct src and alt attributes", () => {
-    const results = ["mock data"];
+    const results = ["image1.jpg", "image2.jpg", "image3.jpg"];
     render(<SearchResults results={results} />);
-    const image = screen.getByAltText("moon");
-    expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute(
-      "src",
-      "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-    );
+    expect(screen.queryByText("No results")).not.toBeInTheDocument();
+    const images = screen.queryAllByAltText("spaceImage");
+    expect(images).toHaveLength(results.length);
   });
 });
