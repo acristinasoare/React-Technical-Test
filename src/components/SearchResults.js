@@ -7,9 +7,11 @@ function SearchResults({ results }) {
   }
   return (
     <>
-      {results.map((image) => (
-        <img key={image} className="card-image" src={image} alt="spaceImage" />
-      ))}
+      <div className="grid-container">
+        {results.map((image) => (
+          <img key={image} className="grid-item" src={image} alt="spaceImage" />
+        ))}
+      </div>
     </>
   );
 }
