@@ -35,5 +35,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs",
+      "preset": "@vue/cli-plugin-unit-jest",
+      "transformIgnorePatterns": [
+        "node_modules/(?!axios)"
+      ]
+    }
+  },
+  "devDependencies": {
+    "babel-jest": "^29.6.2"
   }
 }
